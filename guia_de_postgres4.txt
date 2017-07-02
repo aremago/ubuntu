@@ -1,0 +1,99 @@
+Para ejecutar pgAdmin4 desde la consola
+	pgadmin4
+Para ver pgAdmin en el browser
+	 localhost:5050
+
+PostgreSQL
+	sudo apt-get install postgresql
+	Acceder a el sudo -i -u postgres
+	psql
+	\du para ver los usuarios
+	\l para ver las bases de datos
+	\c <nombre de bd> para usar la base de datos;
+	\d para ver las tablas de la bd
+	\q para salir 
+
+	CREATE DATABASE <Nombre de la bd>;
+	CREATE TABLE <Nombre de la tabla>(<CAMPO TIPO DE DATO [LONGITUD]>);
+	CREATE TABLE contactos(id serial, 
+				nombre varchar(100), 
+				email varchar(100),
+				telefono varchar(13));
+	DROP DATABASE <Nombre de la BD>;
+	DROP TABLE <Nombre de la tabla>;
+
+	1.-insert into <Nombre de tabla>(campos de la tabla), values(datos a insertar'');
+	2.-insert into <Nombre de tabla>(campos de la tabla), values(datos a insertar'');
+	3.- insert into <nombre de tabla> values(datos a insertar); 
+	
+	1.-select <nombre de campo> from <nombre de tabla>;
+	2.-select *from <nombre de tabla>;
+		
+	
+	\d <nombre de tabla> Para ver los campos de la tabla	
+	
+	\
+	\
+		Para insertar un script de una bd
+	1.- CREAS UNA BD;
+	2.- Ingresa en la bd con \c <nombre de la bd>;
+	3.- SE EJECUTA EL SCRIPT CON \i <RUTA DONDE ESTA EL SCRIPT>
+	     ejemplo: \i /home/aremago/Desktop/dellstore2-normal-1.0.sql
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ O T R O @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Para ejecutar pgAdmin4 desde la consola
+	pgadmin4
+Para ver pgAdmin en el browser
+	 localhost:5050
+
+OPERADORES RELACIONALES Y LOGICOS EN POSTGRESQL4
+
+SELECT (campos a seleccionar ) FROM (bd.tabla) WHERE (campo) = ‘ #’; IGUAL
+
+SELECT (campos a seleccionar ) FROM (bd.tabla) WHERE (campo) <> ‘ #’; DIFERENTE
+
+SELECT (campos a seleccionar ) FROM (bd.tabla) WHERE (campo) > (numero a comparar); MAYOR QUE
+
+SELECT (campos a seleccionar ) FROM (bd.tabla) WHERE (campo) >= (numero a comparar); MAYOR  O IGUAL
+
+SELECT (campos a seleccionar ) FROM (bd.tabla) WHERE (campo) < (numero a comparar); MENOR QUE
+
+SELECT (campos a seleccionar ) FROM (bd.tabla) WHERE (campo) <= (numero a comparar); MENOR O IGUAL
+
+SELECT (campos a seleccionar ) FROM (bd.tabla) WHERE (campo edad) BETWEEN (entre el valor uno) AND (valor dos) ; ESTA ENTRE DOS VALORES
+
+SELECT (campos a seleccionar) FROM (bd.tabla) WHERE (campo edad) IN (VALORES A,B,C); CUALQUIER VALOR LISTADO
+
+SELECT (campos a seleccionar) FROM (bd.tabla) WHERE (campo-nombre) LIEK ‘A%’; DONDE EL CAMPO-NOMBRE COMIENCE CON LA LETRA ASIGNADA, EL % PUEDE SER AL COMIENZO O AL FINAL O EN AMBOS CASOS.
+
+SELECT count(*), count(firstname) FROM public.customers ; VARIABLE COUNT PARA CONTAR LOS REGISTROS DE LA TABLA
+
+SELECT count(*), count(firstname) FROM public.customers where firstname like 'A%' ; PARA CONTAR LOS REGISTROS QUE EMPIEZAN CON LA LETRA DESEADA EN EL CAMPO ASIGNADO
+
+SELECT (campos a seleccionar) FROM (bd.tabla) WHERE (campo) IS NULL ; SELECCIONAR LOS REGISTROS DE LA TABLA QUE NO TENGA NADA EN EL REGISTRO SELECCIONADO
+
+SELECT (campos a seleccionar) FROM (bd.tabla) WHERE (campo) IS NOT NULL ; SELECCIONAR LOS REGISTROS DE LA TABLA QUE TENGA TODOS SUS REGISTROS AL REVES DEL DE ARRIBA 
+
+AND                   Y LOGICA
+OR                     O LOGICA 
+NOT                   NEGACION, INIVIERTE EL VALOR	
+
+1.- CREAR CARPETA Y ENTRAR EN LA CARPETA
+	mkdir enviromentpy /opt
+	
+2.- PERMISOS chown aremago:aremago enviromentpy
+	cd /opt/enviromentpy/
+	
+	mkdir pgadmin4
+3.- CREAR AMBIENTE DE VIRTUALIZACION
+	virtualenv pgadmin4
+4.- 
+	source bin/activate
+
+	cd pgadmin4
+
+
+
+
+
